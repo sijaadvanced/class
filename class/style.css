@@ -544,3 +544,7 @@ html::-webkit-scrollbar{
 table td{
   border: 1px solid #ffffff;
 }
+
+.jadwal {
+  display: flex;
+}
