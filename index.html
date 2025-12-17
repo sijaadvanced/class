@@ -2,11 +2,12 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>X SIJA Advanced</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="js/main.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_mobile.css" media="screen and (max-width: 600px)">
+  <!-- <script src="js/main.js" defer></script> -->
 </head>
 
 <body>
@@ -18,6 +19,12 @@
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
+    <!-- <ul id="navMenu">
+      <li><button type="button" onclick="showPage('home')">Home</button></li>
+      <li><button type="button" onclick="showPage('contact')">Feedback</button></li>
+      <li><button type="button" onclick="showPage('tugas')">Tugas</button></li>
+      <li><button type="button" onclick="showPage('jadwal')">Jadwal</button></li>
+    </ul> -->
     <ul id="navMenu">
       <li><button type="button" onclick="showPage('home')">Home</button></li>
       <li><button type="button" onclick="showPage('contact')">Feedback</button></li>
@@ -38,56 +45,56 @@
         <br><br>
         <center>
           <div class="article-here">
-            <h1>Baca Juga</h1>
+            <!-- <h1>Baca Juga</h1> -->
           </div>
-          <div class="article">
+          <!-- <div class="article">
             <a href="/article/Stealer-Malware-Ancaman-Siber-yang-Mengincar-Data-Pribadi.html"
               style="display: contents;">
               <img
                 src="https://blogapp.bitdefender.com/hotforsecurity/content/images/size/w600/2022/11/attack-6806140.png"
                 alt="Artikel">
               <h3>Stealer Malware: Ancaman Siber yang Mengincar Data Pribadi</h3>
-            </a>
-          </div>
-        </center>
+            </a> -->
       </div>
+      </center>
+    </div>
 
-      <div id="contact-page" class="page">
-        <div class="wrapper">
-          <div class="title">
-            <h1>Kontak Kami</h1>
-          </div>
-          <div class="box">
-            <h2>Form Kirim Pesan</h2>
-            <p class="sub">Isi form berikut untuk mengirim pesan ke email kami</p>
-            <form id="contactForm">
-              <div class="field">
-                <label for="name">Nama</label>
-                <input type="text" id="name" name="name" placeholder="Nama lengkap" required />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email Anda" required />
-              </div>
-              <div class="field">
-                <label for="subject">Subjek</label>
-                <input type="text" id="subject" name="subject" placeholder="Subjek pesan" required />
-              </div>
-              <div class="field">
-                <label for="message">Pesan</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda di sini..."
-                  required></textarea>
-              </div>
-              <button type="submit">Kirim Pesan</button>
-              <div id="formStatus" class="result" style="margin-top: 12px; min-height: 30px;"></div>
-            </form>
-            <div class="privacy-info">
-              <strong>Privasi Anda Aman:</strong> Kami <strong>TIDAK</strong> menyimpan data pribadi Anda. Feedback
-              hanya tersimpan secara lokal di dashboard admin.
+    <div id="contact-page" class="page">
+      <div class="wrapper">
+        <div class="title">
+          <h1>Kontak Kami</h1>
+        </div>
+        <div class="box">
+          <h2>Form Kirim Pesan</h2>
+          <p class="sub">Isi form berikut untuk mengirim pesan ke email kami</p>
+          <form id="contactForm">
+            <div class="field">
+              <label for="name">Nama</label>
+              <input type="text" id="name" name="name" placeholder="Nama lengkap" required />
             </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email Anda" required />
+            </div>
+            <div class="field">
+              <label for="subject">Subjek</label>
+              <input type="text" id="subject" name="subject" placeholder="Subjek pesan" required />
+            </div>
+            <div class="field">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda di sini..."
+                required></textarea>
+            </div>
+            <button type="submit">Kirim Pesan</button>
+            <div id="formStatus" class="result" style="margin-top: 12px; min-height: 30px;"></div>
+          </form>
+          <div class="privacy-info">
+            <strong>Privasi Anda Aman:</strong> Kami <strong>TIDAK</strong> menyimpan data pribadi Anda. Feedback
+            hanya tersimpan secara lokal di dashboard admin.
           </div>
         </div>
       </div>
+    </div>
     </div>
     <div id="tugas-page" class="page">
       <div class="wrapper">
@@ -104,216 +111,392 @@
         <div class="title">
           <h1>Jadwal</h1>
         </div>
-      </div>
-      <!--
-      <div class="kartu">
-          <table style="width: 100%;height: 100%;">
-              <tr>
-                  <td>JP 1</td>
-                  <td>Pelajaran 1</td>
-              </tr>
-              <tr>
-                  <td>JP 2</td>
-                  <td>Pelajaran 1</td>
-              </tr>
-              <tr>
-                  <td>JP 3</td>
-                  <td>Pelajaran 1</td>
-              </tr>
-              <tr>
-                  <td>JP 4</td>
-                  <td>Pelajaran 1</td>
-              </tr>
-              <tr>
-                  <td>JP 5</td>
-                  <td>Pelajaran 1</td>
-              </tr>
-              <tr>
-                  <td>JP 6</td>
-                  <td>Pelajaran 2</td>
-                  <tr>
-                <td>JP 7</td>
-                  <td>Pelajaran 2</td>
-              </tr>
-              <tr>
-                  <td>JP 8</td>
-                  <td>Pelajaran 2</td>
-              </tr>
-              <tr>
-                  <td>JP 9</td>
-                  <td>Pelajaran 2</td>
-              </tr>
-              <tr>
-                  <td>JP 10</td>
-                  <td>Pelajaran 2</td>
-              </tr>
-              <tr>
-                  <td>JP 11</td>
-                  <td>Pelajaran 2</td>
-              </tr>
-              <tr>
-                  <td>JP 12</td>
-                  <td>Pelajaran 2</td>
-              </tr>
-          </table>
-      </div>
+        <div class="tipeBlok hari">
+          <a id="normatif" onclick="normatif()">Normatif</a>
+          <a id="kejuruan">Kejuruan</a>
         </div>
       </div>
-    -->
-      <div><a href="#senin" onclick="hari('senin')">Senin</a></div>
-      <div class="kartu">
-        <table style="width: 250px;margin-bottom: 20px;">
-          <tr>
-            <td colspan="2" style="text-align: center;">JP 0-JP 4</td>
-          </tr>
-          <tr>
-            <td>07.00 - 08.00</td>
-            <td>Upacara</td>
-          </tr>
-          <tr>
-            <td>08.00 - 08.35</td>
-            <td>IPAS</td>
-          </tr>
-          <tr>
-            <td>08.35 - 09.10</td>
-            <td>iPAS</td>
-          </tr>
-          <tr>
-            <td>09.45 - 10.20</td>
-            <td>IPAS</td>
-          </tr>
-          <tr>
-            <td>09.10 - 09.45</td>
-            <td>IPAS</td>
-          </tr>
-        </table>
-        <table style="width: 250px;margin-bottom: 20px;">
-          <tr>
-            <td colspan="2" style="text-align: center;">JP 5-JP 6</td>
-          </tr>
-          <tr>
-            <td>10.35 - 11.10</td>
-            <td>BK</td>
-          </tr>
-          <tr>
-            <td>11.10 - 11.45</td>
-            <td>BK</td>
-          </tr>
-          <table style="width: 250px;margin-bottom: 20px;">
-            <tr>
-              <td colspan="2" style="text-align: center;">JP 7-JP 8</td>
-            </tr>
-            <tr>
-              <td>12.15 - 12.55</td>
-              <td>Seni</td>
-            </tr>
-            <tr>
-              <td>12.55 - 13.35</td>
-              <td>Seni</td>
-            </tr>
-          </table>
-          <table style="width: 250px;margin-bottom: 20px;">
-            <tr>
-              <td colspan="2" style="text-align: center;">JP 9-JP 12</td>
-            </tr>
-            <tr>
-              <td>13.35 - 14.15</td>
-              <td>PABP</td>
-            </tr>
-            <tr>
-              <td>14.15 - 14.55</td>
-              <td>Pelajaran</td>
-            </tr>
-            <tr>
-              <td>15.10 - 15.45</td>
-              <td>Pelajaran</td>
-            </tr>
-          </table>
-          <div class="jadwal">
-            <div><a href="#senin" onclick="hari('senin')">Senin</a></div>
-            <div class="kartu">
-              <table style="width: 250px;margin-bottom: 20px;">
+
+      <div class="tipeHari">
+        <div><a href="#" onclick="tampilkanHari('senin')">Senin</a></div>
+        <div><a href="#" onclick="tampilkanHari('selasa')">Selasa</a></div>
+        <div><a href="#" onclick="tampilkanHari('rabu')">Rabu</a></div>
+        <div><a href="#" onclick="tampilkanHari('kamis')">Kamis</a></div>
+        <div><a href="#" onclick="tampilkanHari('jumat')">Jum'at</a></div>
+
+      </div>
+      <div class="jadwalCont">
+
+        <!--HARI SENIN-->
+        <div class="hari">
+          <div class="sel"><a href="#" onclick="tampilkanHari('senin')">Senin</a></div>
+          <div class="kartu" id="senin">
+            <table style="width: 200px;">
+              <tr>
+                <td colspan="2" style="text-align: center;">JP 0-JP 4</td>
+              </tr>
+              <tr>
+                <td>07.00 - 08.00</td>
+                <td>Upacara senin</td>
+              </tr>
+              <tr>
+                <td>08.00 - 08.35</td>
+                <td>IPAS</td>
+              </tr>
+              <tr>
+                <td>08.35 - 09.10</td>
+                <td>iPAS</td>
+              </tr>
+              <tr>
+                <td>09.45 - 10.20</td>
+                <td>IPAS</td>
+              </tr>
+              <tr>
+                <td>09.10 - 09.45</td>
+                <td>IPAS</td>
+              </tr>
+            </table>
+            <table style="width: 200px;">
+              <tr>
+                <td colspan="2" style="text-align: center;">JP 5-JP 6</td>
+              </tr>
+              <tr>
+                <td>10.35 - 11.10</td>
+                <td>BK</td>
+              </tr>
+              <tr>
+                <td>11.10 - 11.45</td>
+                <td>BK</td>
+              </tr>
+              <table style="width: 200px;">
                 <tr>
-                  <td colspan="2" style="text-align: center;">JP 0-JP 4</td>
+                  <td colspan="2" style="text-align: center;">JP 7-JP 8</td>
                 </tr>
                 <tr>
-                  <td>07.00 - 08.00</td>
-                  <td>Upacara</td>
+                  <td>12.15 - 12.55</td>
+                  <td>Seni</td>
                 </tr>
                 <tr>
-                  <td>08.00 - 08.35</td>
-                  <td>IPAS</td>
-                </tr>
-                <tr>
-                  <td>08.35 - 09.10</td>
-                  <td>iPAS</td>
-                </tr>
-                <tr>
-                  <td>09.45 - 10.20</td>
-                  <td>IPAS</td>
-                </tr>
-                <tr>
-                  <td>09.10 - 09.45</td>
-                  <td>IPAS</td>
+                  <td>12.55 - 13.35</td>
+                  <td>Seni</td>
                 </tr>
               </table>
-              <table style="width: 250px;margin-bottom: 20px;">
+              <table style="width: 200px;">
                 <tr>
-                  <td colspan="2" style="text-align: center;">JP 5-JP 6</td>
+                  <td colspan="2" style="text-align: center;">JP 9-JP 12</td>
                 </tr>
                 <tr>
-                  <td>10.35 - 11.10</td>
-                  <td>BK</td>
+                  <td>13.35 - 14.15</td>
+                  <td>PABP</td>
                 </tr>
                 <tr>
-                  <td>11.10 - 11.45</td>
-                  <td>BK</td>
+                  <td>14.15 - 14.55</td>
+                  <td>Pelajaran</td>
                 </tr>
-                <table style="width: 250px;margin-bottom: 20px;">
-                  <tr>
-                    <td colspan="2" style="text-align: center;">JP 7-JP 8</td>
-                  </tr>
-                  <tr>
-                    <td>12.15 - 12.55</td>
-                    <td>Seni</td>
-                  </tr>
-                  <tr>
-                    <td>12.55 - 13.35</td>
-                    <td>Seni</td>
-                  </tr>
-                </table>
-                <table style="width: 250px;margin-bottom: 20px;">
-                  <tr>
-                    <td colspan="2" style="text-align: center;">JP 9-JP 12</td>
-                  </tr>
-                  <tr>
-                    <td>13.35 - 14.15</td>
-                    <td>PABP</td>
-                  </tr>
-                  <tr>
-                    <td>14.15 - 14.55</td>
-                    <td>Pelajaran</td>
-                  </tr>
-                  <tr>
-                    <td>15.10 - 15.45</td>
-                    <td>Pelajaran</td>
-                  </tr>
-                </table>
-                <!--<tr>
-            <td>10.15 - 11.45</td>
-            <td>Pelajaran</td>
-          </tr>
-          <tr>
-            <td>12.15 - 13.35</td>
-            <td>Pelajaran</td>
-          </tr>
-          <tr>
-            <td>13.35 - 15.45</td>
-            <td>Pelajaran</td>
-          </tr>-->
+                <tr>
+                  <td>15.10 - 15.45</td>
+                  <td>Pelajaran</td>
+                </tr>
               </table>
-            </div>
           </div>
+        </div>
+
+        <!--HARI SELASA-->
+        <div class="hari">
+          <div class="sel"><a href="#" onclick="tampilkanHari('selasa')">Selasa</a></div>
+          <div class="kartu" id="selasa">
+            <table style="width: 200px;">
+              <tr>
+                <td colspan="2" style="text-align: center;">JP 0-JP 4</td>
+              </tr>
+              <tr>
+                <td>07.00 - 08.00</td>
+                <td>haha selasa</td>
+              </tr>
+              <tr>
+                <td>08.00 - 08.35</td>
+                <td>IPAS</td>
+              </tr>
+              <tr>
+                <td>08.35 - 09.10</td>
+                <td>iPAS</td>
+              </tr>
+              <tr>
+                <td>09.45 - 10.20</td>
+                <td>IPAS</td>
+              </tr>
+              <tr>
+                <td>09.10 - 09.45</td>
+                <td>IPAS</td>
+              </tr>
+            </table>
+            <table style="width: 200px;">
+              <tr>
+                <td colspan="2" style="text-align: center;">JP 5-JP 6</td>
+              </tr>
+              <tr>
+                <td>10.35 - 11.10</td>
+                <td>BK</td>
+              </tr>
+              <tr>
+                <td>11.10 - 11.45</td>
+                <td>BK</td>
+              </tr>
+              <table style="width: 200px;">
+                <tr>
+                  <td colspan="2" style="text-align: center;">JP 7-JP 8</td>
+                </tr>
+                <tr>
+                  <td>12.15 - 12.55</td>
+                  <td>Seni</td>
+                </tr>
+                <tr>
+                  <td>12.55 - 13.35</td>
+                  <td>Seni</td>
+                </tr>
+              </table>
+              <table style="width: 200px;">
+                <tr>
+                  <td colspan="2" style="text-align: center;">JP 9-JP 12</td>
+                </tr>
+                <tr>
+                  <td>13.35 - 14.15</td>
+                  <td>PABP</td>
+                </tr>
+                <tr>
+                  <td>14.15 - 14.55</td>
+                  <td>Pelajaran</td>
+                </tr>
+                <tr>
+                  <td>15.10 - 15.45</td>
+                  <td>Pelajaran</td>
+                </tr>
+              </table>
+          </div>
+        </div>
+
+        <!--HARI RABU-->
+        <div class="hari">
+          <div class="sel"><a href="#" onclick="tampilkanHari('rabu')">Rabu</a></div>
+          <div class="kartu" id="rabu">
+            <table style="width: 200px;">
+              <tr>
+                <td colspan="2" style="text-align: center;">JP 0-JP 4</td>
+              </tr>
+              <tr>
+                <td>07.00 - 08.00</td>
+                <td>yeay rabu</td>
+              </tr>
+              <tr>
+                <td>08.00 - 08.35</td>
+                <td>IPAS</td>
+              </tr>
+              <tr>
+                <td>08.35 - 09.10</td>
+                <td>iPAS</td>
+              </tr>
+              <tr>
+                <td>09.45 - 10.20</td>
+                <td>IPAS</td>
+              </tr>
+              <tr>
+                <td>09.10 - 09.45</td>
+                <td>IPAS</td>
+              </tr>
+            </table>
+            <table style="width: 200px;">
+              <tr>
+                <td colspan="2" style="text-align: center;">JP 5-JP 6</td>
+              </tr>
+              <tr>
+                <td>10.35 - 11.10</td>
+                <td>BK</td>
+              </tr>
+              <tr>
+                <td>11.10 - 11.45</td>
+                <td>BK</td>
+              </tr>
+              <table style="width: 200px;">
+                <tr>
+                  <td colspan="2" style="text-align: center;">JP 7-JP 8</td>
+                </tr>
+                <tr>
+                  <td>12.15 - 12.55</td>
+                  <td>Seni</td>
+                </tr>
+                <tr>
+                  <td>12.55 - 13.35</td>
+                  <td>Seni</td>
+                </tr>
+              </table>
+              <table style="width: 200px;">
+                <tr>
+                  <td colspan="2" style="text-align: center;">JP 9-JP 12</td>
+                </tr>
+                <tr>
+                  <td>13.35 - 14.15</td>
+                  <td>PABP</td>
+                </tr>
+                <tr>
+                  <td>14.15 - 14.55</td>
+                  <td>Pelajaran</td>
+                </tr>
+                <tr>
+                  <td>15.10 - 15.45</td>
+                  <td>Pelajaran</td>
+                </tr>
+              </table>
+          </div>
+        </div>
+
+        <!--HARI KAMIS-->
+        <div class="hari">
+          <div class="sel"><a href="#" onclick="tampilkanHari('kamis')">Kamis</a></div>
+          <div class="kartu" id="kamis">
+            <table style="width: 200px;">
+              <tr>
+                <td colspan="2" style="text-align: center;">JP 0-JP 4</td>
+              </tr>
+              <tr>
+                <td>07.00 - 08.00</td>
+                <td>hore kamis</td>
+              </tr>
+              <tr>
+                <td>08.00 - 08.35</td>
+                <td>IPAS</td>
+              </tr>
+              <tr>
+                <td>08.35 - 09.10</td>
+                <td>iPAS</td>
+              </tr>
+              <tr>
+                <td>09.45 - 10.20</td>
+                <td>IPAS</td>
+              </tr>
+              <tr>
+                <td>09.10 - 09.45</td>
+                <td>IPAS</td>
+              </tr>
+            </table>
+            <table style="width: 200px;">
+              <tr>
+                <td colspan="2" style="text-align: center;">JP 5-JP 6</td>
+              </tr>
+              <tr>
+                <td>10.35 - 11.10</td>
+                <td>BK</td>
+              </tr>
+              <tr>
+                <td>11.10 - 11.45</td>
+                <td>BK</td>
+              </tr>
+              <table style="width: 200px;">
+                <tr>
+                  <td colspan="2" style="text-align: center;">JP 7-JP 8</td>
+                </tr>
+                <tr>
+                  <td>12.15 - 12.55</td>
+                  <td>Seni</td>
+                </tr>
+                <tr>
+                  <td>12.55 - 13.35</td>
+                  <td>Seni</td>
+                </tr>
+              </table>
+              <table style="width: 200px;">
+                <tr>
+                  <td colspan="2" style="text-align: center;">JP 9-JP 12</td>
+                </tr>
+                <tr>
+                  <td>13.35 - 14.15</td>
+                  <td>PABP</td>
+                </tr>
+                <tr>
+                  <td>14.15 - 14.55</td>
+                  <td>Pelajaran</td>
+                </tr>
+                <tr>
+                  <td>15.10 - 15.45</td>
+                  <td>Pelajaran</td>
+                </tr>
+              </table>
+          </div>
+        </div>
+
+        <!--HARI JUM'AT-->
+        <div class="hari">
+          <div class="sel"><a href="#" onclick="tampilkanHari('jumat')">Jum'at</a></div>
+          <div class="kartu" id="jumat">
+            <table style="width: 200px;">
+              <tr>
+                <td colspan="2" style="text-align: center;">JP 0-JP 4</td>
+              </tr>
+              <tr>
+                <td>07.00 - 08.00</td>
+                <td>besok libur</td>
+              </tr>
+              <tr>
+                <td>08.00 - 08.35</td>
+                <td>IPAS</td>
+              </tr>
+              <tr>
+                <td>08.35 - 09.10</td>
+                <td>iPAS</td>
+              </tr>
+              <tr>
+                <td>09.45 - 10.20</td>
+                <td>IPAS</td>
+              </tr>
+              <tr>
+                <td>09.10 - 09.45</td>
+                <td>IPAS</td>
+              </tr>
+            </table>
+            <table style="width: 200px;">
+              <tr>
+                <td colspan="2" style="text-align: center;">JP 5-JP 6</td>
+              </tr>
+              <tr>
+                <td>10.35 - 11.10</td>
+                <td>BK</td>
+              </tr>
+              <tr>
+                <td>11.10 - 11.45</td>
+                <td>BK</td>
+              </tr>
+              <table style="width: 200px;">
+                <tr>
+                  <td colspan="2" style="text-align: center;">JP 7-JP 8</td>
+                </tr>
+                <tr>
+                  <td>12.15 - 12.55</td>
+                  <td>Seni</td>
+                </tr>
+                <tr>
+                  <td>12.55 - 13.35</td>
+                  <td>Seni</td>
+                </tr>
+              </table>
+              <table style="width: 200px;">
+                <tr>
+                  <td colspan="2" style="text-align: center;">JP 9-JP 12</td>
+                </tr>
+                <tr>
+                  <td>13.35 - 14.15</td>
+                  <td>PABP</td>
+                </tr>
+                <tr>
+                  <td>14.15 - 14.55</td>
+                  <td>Pelajaran</td>
+                </tr>
+                <tr>
+                  <td>15.10 - 15.45</td>
+                  <td>Pelajaran</td>
+                </tr>
+              </table>
+          </div>
+        </div>
+      </div>
   </main>
   <footer>
     <p>&copy; 2025 SIJA Advanced. All rights reserved.</p>
@@ -325,6 +508,18 @@
       menu.classList.toggle("active");
       hamburger.classList.toggle("active");
     }
+
+    document.addEventListener("click", function (e) {
+      const menu = document.getElementById("navMenu");
+      const hamburger = document.getElementById("hamburger");
+
+      if (menu.classList.contains("active")) {
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+          menu.classList.remove("active");
+          hamburger.classList.remove("active");
+        }
+      }
+    });
 
     function showPage(pageId) {
       document
@@ -342,6 +537,38 @@
       hamburger.classList.toggle("active");
     }
   </script>
+  <script>
+    function tampilkanHari(hariId) {
+      const isMobile = window.matchMedia('(max-width: 600px)').matches;
+      if (!isMobile) return;
+
+      // sembunyikan semua kartu
+      const semuaKartu = document.querySelectorAll('.kartu');
+      semuaKartu.forEach(k => k.style.display = 'none');
+
+      // tampilkan kartu sesuai pilihan
+      const hari = document.getElementById(hariId);
+      if (hari) {
+        hari.style.display = 'block';
+      }
+    }
+
+    function hariIni() {
+      const hariIndex = new Date().getDay();
+      const mapHari = ['minggu', 'senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu'];
+      tampilkanHari(mapHari[hariIndex]);
+    }
+
+    document.addEventListener('DOMContentLoaded', hariIni)
+  </script>
+  <script>
+    function normatif() {
+      const normatif = document.getElementById('normatif');
+      const semuaKartu = document.querySelectorAll('.kartu');
+      semuaKartu.forEach(k => k.style.display = 'block');
+    }
+  </script>
+
 </body>
 
 </html>
