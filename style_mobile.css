@@ -1,0 +1,119 @@
+.kartu {
+    /* border: 2px solid white; */
+    width: 80vw;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    /* gap: 20px; */
+    background: rgba(30, 60, 130, 0.4);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 16px #424c61;
+    /* box-shadow: 0 0 20px rgba(0, 150, 255, 0.4); */
+    padding: 30px 2rem;
+    color: white;
+    /* width: fit-content; */
+    height: fit-content;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+table td {
+    border: 1px solid #ffffff;
+}
+
+.jadwal {
+    display: flex;
+    margin: 0;
+}
+
+.hari {
+    width: 100%;
+}
+
+.hari .sel {
+    display: none;
+}
+
+.hari a {
+    display: none;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    background: #252d5a;
+    box-shadow: inset 0px 5px 6px #424c61;
+    border-radius: 15px;
+    padding: 5px 20px;
+    display: flex;
+    justify-self: center;
+    transition: .15s ease-in-out;
+    margin-bottom: 40px;
+}
+
+.hari a:hover {
+    box-shadow: inset 0px -5px 6px #142345;
+    background: #515a91;
+    transition: .15s ease-in-out;
+}
+
+.jadwalCont {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: space-evenly;
+    /* gap: 40px; */
+    font-size: .8em;
+    margin-top: 30px;
+}
+
+.tipeBlok {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    margin-bottom: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+#kejuruan {
+    border-radius: 0 15px 15px 0;
+}
+
+#normatif {
+    border-radius: 15px 0 0 15px;
+}
+
+.tipeHari{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.tipeHari div{
+    width: 230px;
+    height: 40px;
+    text-align: center;
+}
+
+
+.tipeHari a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    background: #252d5a;
+    box-shadow: inset 0px 5px 6px #424c61;
+    border-radius: 15px;
+    /* padding: 5px 20px; */
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    transition: .15s ease-in-out;
+    margin-bottom: 40px;
+}
+
