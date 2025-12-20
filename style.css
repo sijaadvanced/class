@@ -1,6 +1,6 @@
 :root {
   --bg: #0a0f2a;
-  --panel: rgba(20, 25, 60, 0.75);
+  --panel: #14193cbf;
   --glow: #68befb;
   --danger: #ff4a7a;
   --safe: #3ef2b0;
@@ -9,6 +9,8 @@
 
 * {
   box-sizing: border-box;
+  /* border: white 1px solid; */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -69,11 +71,12 @@ body::before {
 
 nav {
   width: 100%;
+  height: 55px;
   background: var(--panel);
   backdrop-filter: blur(16px) saturate(180%);
   border-bottom: 1.5px solid rgba(0, 216, 255, 0.3);
   box-shadow: 0 0 25px rgba(0, 216, 255, 0.2);
-  padding: 6px 32px;
+  padding: 0px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,15 +137,17 @@ nav .logo span {
   transform: rotate(-45deg) translate(8px, -8px);
 }
 
+
+/* MENU YANG LAMA */
 nav ul {
   list-style: none;
   display: flex;
-  /* gap: 28px; */
+  gap: 28px;
   margin: 0;
   padding: 0;
 }
 
-nav ul li button {
+/*nav ul li button {
   background: none;
   border: none;
   color: #d0e8ff;
@@ -153,7 +158,6 @@ nav ul li button {
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 18px;
   user-select: none;
-  height: 80px;
 }
 
 nav ul li button:hover,
@@ -162,6 +166,64 @@ nav ul li button:focus {
   color: var(--bg);
   box-shadow: 0 0 14px var(--glow);
   outline: none;
+}
+
+ nav ul {
+    position: absolute;
+    width: 50%;
+    top: 100%;
+    left: 50%;
+    right: 0;
+    flex-direction: column;
+    background: var(--panel);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-top: 1.5px solid rgba(0, 216, 255, 0.3);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    z-index: 15;
+    text-align: center;
+  }*/
+
+
+/* MENU VERSI BARU YAK */
+nav ul.active {
+  max-height: 320px;
+}
+
+nav ul li button {
+  width: 100%;
+  font-size: 20px;
+  padding: 14px 20px;
+  background: #3ef2b0;
+}
+
+ul li button::before {
+  content: "";
+  background: white;
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul li button:hover::before {
+  width: 100%;
+  height: 3px;
+  transition: .25s ease;
+}
+
+ul li {
+  transition: .3s ease;
+  background: linear-gradient(0deg, #ffffff00, #e7191900);
+  height: 100%;
+}
+
+ul li:hover {
+  animation: blink .14s steps(1);
+  transition: .3s ease;
+  background: linear-gradient(0deg, #ffffff00, #c1c1c1a3);
 }
 
 main {
@@ -304,9 +366,14 @@ textarea::placeholder {
   font-weight: 500;
 }
 
+#navMenu {
+  height: 100%;
+}
+
 #navMenu button {
-  width: 100%;
-  padding: 8px 12px;
+  width: 120px;
+  height: 100%;
+  padding: 0px 12px;
   border: none;
   font-size: 19px;
   font-weight: 700;
@@ -560,6 +627,15 @@ footer p {
 }
 
 @media (max-width: 745px) {
+  #navMenu {
+    height: 100vh;
+  }
+
+  #navMenu button {
+    width: 100%;
+    height: 55px;
+  }
+
   .article {
     flex-direction: column;
     gap: 12px;
@@ -574,6 +650,7 @@ footer p {
   nav ul {
     position: absolute;
     width: 50%;
+    height: 100%;
     top: 100%;
     left: 50%;
     right: 0;
@@ -586,10 +663,12 @@ footer p {
     transition: max-height 0.35s ease;
     z-index: 15;
     text-align: center;
+    gap: 0;
+    column-gap: 0;
   }
 
   nav ul.active {
-    max-height: 320px;
+    max-height: 250px;
     padding: 14px 0;
   }
 
@@ -616,12 +695,12 @@ footer p {
     transition: .25s ease;
   }
 
-  ul li{
+  ul li {
     transition: .3s ease;
     background: linear-gradient(90deg, #ffffff00, #e7191900);
-    
+    height: 55px;
   }
-  
+
   ul li:hover {
     animation: blink .14s steps(1);
     /* transition: .3s ease; */
@@ -634,15 +713,13 @@ footer p {
 }
 
 @keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
+
+  0%,
   65% {
     opacity: 0;
   }
+
+  30%,
   100% {
     opacity: 1;
   }
@@ -683,8 +760,22 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+
+
 table td {
   border: 1px solid #ffffff;
+}
+
+.kartu table {
+  width: 100%;
+}
+
+table .jpHeader {
+  text-align: center;
+}
+
+tr td {
+  width: 50%;
 }
 
 .jadwal {
@@ -744,7 +835,50 @@ table td {
   transform: translateX(-25px);
 } */
 
-.tipeHari{
+.tipeHari {
   display: none;
   font-size: 16px;
+}
+
+.tipeBlokTugas {
+    display: flex;
+    flex-direction: row;
+}
+
+.tipeTugas {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    /* background: var(--panel); */
+    box-shadow: inset 0px -5px 1px #424c61;
+    /* border-radius: 15px; */
+    padding: 5px 20px;
+    display: flex;
+    justify-self: center;
+    transition: .15s ease-in-out;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.tipeTugas:hover {
+    animation: blink .14s steps(1);
+    box-shadow: inset 0px -5px 1px #ffffff;
+}
+
+.tipeTugas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    background: linear-gradient(180deg, #ffffff00, #c1c1c1a3);
+
+}
+
+.tipeTugas:hover::before {
+    animation: blink .14s steps(1);
+    opacity: 1;
 }
