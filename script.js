@@ -26,57 +26,55 @@ function showPage(pageId) {
     document.getElementById(pageId + "-page").classList.add("active");
     window.scrollTo(0, 0);
 }
-
 showPage("home");
-function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    const hamburger = document.getElementById("hamburger");
-    menu.classList.toggle("active");
-    hamburger.classList.toggle("active");
-}
 
 // RESPONSIVE MOBILE VIEW
-function tampilkanHari(hariId) {
-    const isMobile = window.matchMedia('(max-width: 745px)').matches;
-    const semuaKartu = document.querySelectorAll('.kartu');
-    if (!isMobile) {
-    const semuaKartu = document.querySelectorAll('.kartu');
-    semuaKartu.forEach(k => k.style.display = 'block');
-    };
-    
-    semuaKartu.forEach(k => k.style.display = 'none');
+const semuaKartu = document.querySelectorAll('.kartu');
+const mq = window.matchMedia('(max-width: 745px)');
 
+function tampilkanHari(hariId) {
+
+    semuaKartu.forEach(k => k.style.display = 'none');
     const hari = document.getElementById(hariId);
-    if (hari) {
-        hari.style.display = 'block';
+    if (hari) hari.style.display = 'flex';
+}
+
+function updateView(e) {
+    if (!e.matches) {
+        semuaKartu.forEach(k => k.style.display = 'flex');
+    } else {
+        hariIni();
     }
 }
+
+updateView(mq);
+mq.addEventListener('change', updateView)
 
 // GET TODAY, TAPI BELUM BISA DETECT N/K
 function hariIni() {
     const hariIndex = new Date().getDay();
     const mapHari = ['minggu', 'senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu'];
-    tampilkanHari(mapHari[hariIndex]);
+    
+    let hariId;
+    if (hariIndex === 0 || hariIndex === 6) {
+        hariId = 'senin';
+    } else {
+        hariId = mapHari[hariIndex];
+    }
+    tampilkanHari(hariId);
 }
 
-document.addEventListener('DOMContentLoaded', hariIni)
+document.addEventListener('DOMContentLoaded', () => {
+    updateView(mq);
+});
 
 function normatif() {
-    const normatif = document.getElementById('normatif');
-    const semuaKartu = document.querySelectorAll('.kartu');
-    semuaKartu.forEach(k => k.style.display = 'block');
+    semuaKartu.forEach(k => k.style.display = 'flex');
 }
 
 // KALO SCREEN SIZE BERUBAH, UPDATE STATE
-const mobileView = window.matchMedia('(max-width: 600px)');
-mobileView.addEventListener('change', hariIni);
-if (mobileView.matches) {
-    hariIni(mobileView);
-}
-
-document.addEventListener("click", function (e) {
-    const uli = document.querySelectorAll("ul li button");
-    uli.forEach(button => button.classList.toggle("active"));
-});
-
-document.querySelectorAll()
+// const mobileView = window.matchMedia('(max-width:745px)');
+// mobileView.addEventListener('change', hariIni);
+// if (mobileView.matches) {
+//     hariIni(mobileView);
+// }
