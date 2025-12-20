@@ -33,7 +33,7 @@ const semuaKartu = document.querySelectorAll('.kartu');
 const mq = window.matchMedia('(max-width: 745px)');
 
 function tampilkanHari(hariId) {
-
+    if (!mq.matches) return;
     semuaKartu.forEach(k => k.style.display = 'none');
     const hari = document.getElementById(hariId);
     if (hari) hari.style.display = 'flex';
@@ -54,7 +54,6 @@ mq.addEventListener('change', updateView)
 function hariIni() {
     const hariIndex = new Date().getDay();
     const mapHari = ['minggu', 'senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu'];
-    
     let hariId;
     if (hariIndex === 0 || hariIndex === 6) {
         hariId = 'senin';
@@ -69,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function normatif() {
+    if (mq.matches) return;
     semuaKartu.forEach(k => k.style.display = 'flex');
 }
 
