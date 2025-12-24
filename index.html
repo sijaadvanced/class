@@ -26,10 +26,10 @@
       <li><button type="button" onclick="showPage('jadwal')">Jadwal</button></li>
     </ul> -->
     <ul id="navMenu">
-      <li><button type="button" onclick="showPage('home')">Home</button></li>
-      <li><button type="button" onclick="showPage('contact')">Feedback</button></li>
-      <li><button type="button" onclick="showPage('tugas')">Tugas</button></li>
-      <li><button type="button" onclick="showPage('jadwal')">Jadwal</button></li>
+      <li><button type="button" onclick="showPage('home'); activeTab(this);">Home</button></li>
+      <li><button type="button" onclick="showPage('contact'); activeTab(this);">Feedback</button></li>
+      <li><button type="button" onclick="showPage('tugas'); activeTab(this);">Tugas</button></li>
+      <li><button type="button" onclick="showPage('jadwal'); activeTab(this);">Jadwal</button></li>
     </ul>
   </nav>
 
@@ -145,7 +145,7 @@
               </tr>
               <tr>
                 <td>07.00 - 08.00</td>
-                <td>Upacara senin</td>
+                <td>Upacara / BRIEFING</td>
               </tr>
               <tr>
                 <td>08.00 - 08.35</td>
@@ -505,11 +505,12 @@
           </div>
         </div>
       </div>
+
   </main>
   <footer>
     <p>&copy; 2025 SIJA Advanced. All rights reserved.</p>
   </footer>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

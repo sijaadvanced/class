@@ -28,6 +28,16 @@ function showPage(pageId) {
 }
 showPage("home");
 
+// BENTAR, INI LAGI NYOBA TAB INDICATOR
+// TAPI GAK TAU BISA ATAU NGGAK HEHE
+function activeTab(btn) {
+    const tab = document.querySelectorAll('#navMenu li')
+    tab.forEach((li => {
+        li.classList.remove('active')
+    }))
+    btn.closest('li').classList.add('active')
+}
+
 // RESPONSIVE MOBILE VIEW
 const semuaKartu = document.querySelectorAll('.kartu');
 const mq = window.matchMedia('(max-width: 745px)');
