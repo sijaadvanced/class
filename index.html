@@ -120,8 +120,8 @@
           <a id="kejuruan">Kejuruan</a>
         </div> -->
         <div class="tipeBlokTugas">
-          <a id="normatif" class="tipeTugas" onclick="normatif()">Normatif</a>
-          <a id="kejuruan" class="tipeTugas">Kejuruan</a>
+          <a id="normatif" class="tipeTugas" onclick="blokNormatif()">Normatif</a>
+          <a id="kejuruan" class="tipeTugas" onclick="blokKejuruan()">Kejuruan</a>
         </div>
       </div>
 
@@ -134,7 +134,10 @@
 
       </div>
       <div class="jadwalCont">
-        <div class="normatif">
+
+        <!-- BLOK NORMATIF -->
+        <div class="blokNormatif">
+
           <!--HARI SENIN-->
           <div class="hari">
             <div class="sel"><a href="#" onclick="tampilkanHari('senin')">Senin</a></div>
@@ -506,6 +509,380 @@
           </div>
         </div>
 
+
+        <!-- BLOK KEJURUAN -->
+         <div class="blokKejuruan">
+
+          <!--HARI SENIN-->
+          <div class="hari">
+            <div class="sel"><a href="#" onclick="tampilkanHari('senin')">Senin</a></div>
+            <div class="kartu" id="senin">
+              <table>
+                <tr>
+                  <td colspan="2" class="jpHeader">JP 0-JP 4</td>
+                </tr>
+                <tr>
+                  <td>07.00 - 08.00</td>
+                  <td>Upacara / BRIEFING</td>
+                </tr>
+                <tr>
+                  <td>08.00 - 08.35</td>
+                  <td>ini blok</td>
+                </tr>
+                <tr>
+                  <td>08.35 - 09.10</td>
+                  <td>kejuruan</td>
+                </tr>
+                <tr>
+                  <td>09.45 - 10.20</td>
+                  <td>IPAS</td>
+                </tr>
+                <tr>
+                  <td>09.10 - 09.45</td>
+                  <td>IPAS</td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <td colspan="2" class="jpHeader">JP 5-JP 6</td>
+                </tr>
+                <tr>
+                  <td>10.35 - 11.10</td>
+                  <td>BK</td>
+                </tr>
+                <tr>
+                  <td>11.10 - 11.45</td>
+                  <td>BK</td>
+                </tr>
+                <table>
+                  <tr>
+                    <td colspan="2" class="jpHeader">JP 7-JP 8</td>
+                  </tr>
+                  <tr>
+                    <td>12.15 - 12.55</td>
+                    <td>Seni</td>
+                  </tr>
+                  <tr>
+                    <td>12.55 - 13.35</td>
+                    <td>Seni</td>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <td colspan="2" class="jpHeader">JP 9-JP 12</td>
+                  </tr>
+                  <tr>
+                    <td>13.35 - 14.15</td>
+                    <td>PABP</td>
+                  </tr>
+                  <tr>
+                    <td>14.15 - 14.55</td>
+                    <td>Pelajaran</td>
+                  </tr>
+                  <tr>
+                    <td>15.10 - 15.45</td>
+                    <td>Pelajaran</td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+
+          <!--HARI SELASA-->
+          <div class="hari">
+            <div class="sel"><a href="#" onclick="tampilkanHari('selasa')">Selasa</a></div>
+            <div class="kartu" id="selasa">
+              <table>
+                <tr>
+                  <td colspan="2" class="jpHeader">JP 0-JP 4</td>
+                </tr>
+                <tr>
+                  <td>07.00 - 08.00</td>
+                  <td>haha selasa</td>
+                </tr>
+                <tr>
+                  <td>08.00 - 08.35</td>
+                  <td>IPAS</td>
+                </tr>
+                <tr>
+                  <td>08.35 - 09.10</td>
+                  <td>iPAS</td>
+                </tr>
+                <tr>
+                  <td>09.45 - 10.20</td>
+                  <td>IPAS</td>
+                </tr>
+                <tr>
+                  <td>09.10 - 09.45</td>
+                  <td>IPAS</td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <td colspan="2" class="jpHeader">JP 5-JP 6</td>
+                </tr>
+                <tr>
+                  <td>10.35 - 11.10</td>
+                  <td>BK</td>
+                </tr>
+                <tr>
+                  <td>11.10 - 11.45</td>
+                  <td>BK</td>
+                </tr>
+                <table>
+                  <tr>
+                    <td colspan="2" class="jpHeader">JP 7-JP 8</td>
+                  </tr>
+                  <tr>
+                    <td>12.15 - 12.55</td>
+                    <td>Seni</td>
+                  </tr>
+                  <tr>
+                    <td>12.55 - 13.35</td>
+                    <td>Seni</td>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <td colspan="2" class="jpHeader">JP 9-JP 12</td>
+                  </tr>
+                  <tr>
+                    <td>13.35 - 14.15</td>
+                    <td>PABP</td>
+                  </tr>
+                  <tr>
+                    <td>14.15 - 14.55</td>
+                    <td>Pelajaran</td>
+                  </tr>
+                  <tr>
+                    <td>15.10 - 15.45</td>
+                    <td>Pelajaran</td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+
+          <!--HARI RABU-->
+          <div class="hari">
+            <div class="sel"><a href="#" onclick="tampilkanHari('rabu')">Rabu</a></div>
+            <div class="kartu" id="rabu">
+              <table>
+                <tr>
+                  <td colspan="2" class="jpHeader">JP 0-JP 4</td>
+                </tr>
+                <tr>
+                  <td>07.00 - 08.00</td>
+                  <td>yeay rabu</td>
+                </tr>
+                <tr>
+                  <td>08.00 - 08.35</td>
+                  <td>IPAS</td>
+                </tr>
+                <tr>
+                  <td>08.35 - 09.10</td>
+                  <td>iPAS</td>
+                </tr>
+                <tr>
+                  <td>09.45 - 10.20</td>
+                  <td>IPAS</td>
+                </tr>
+                <tr>
+                  <td>09.10 - 09.45</td>
+                  <td>IPAS</td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <td colspan="2" class="jpHeader">JP 5-JP 6</td>
+                </tr>
+                <tr>
+                  <td>10.35 - 11.10</td>
+                  <td>BK</td>
+                </tr>
+                <tr>
+                  <td>11.10 - 11.45</td>
+                  <td>BK</td>
+                </tr>
+                <table>
+                  <tr>
+                    <td colspan="2" class="jpHeader">JP 7-JP 8</td>
+                  </tr>
+                  <tr>
+                    <td>12.15 - 12.55</td>
+                    <td>Seni</td>
+                  </tr>
+                  <tr>
+                    <td>12.55 - 13.35</td>
+                    <td>Seni</td>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <td colspan="2" class="jpHeader">JP 9-JP 12</td>
+                  </tr>
+                  <tr>
+                    <td>13.35 - 14.15</td>
+                    <td>PABP</td>
+                  </tr>
+                  <tr>
+                    <td>14.15 - 14.55</td>
+                    <td>Pelajaran</td>
+                  </tr>
+                  <tr>
+                    <td>15.10 - 15.45</td>
+                    <td>Pelajaran</td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+
+          <!--HARI KAMIS-->
+          <div class="hari">
+            <div class="sel"><a href="#" onclick="tampilkanHari('kamis')">Kamis</a></div>
+            <div class="kartu" id="kamis">
+              <table>
+                <tr>
+                  <td colspan="2" class="jpHeader">JP 0-JP 4</td>
+                </tr>
+                <tr>
+                  <td>07.00 - 08.00</td>
+                  <td>hore kamis</td>
+                </tr>
+                <tr>
+                  <td>08.00 - 08.35</td>
+                  <td>IPAS</td>
+                </tr>
+                <tr>
+                  <td>08.35 - 09.10</td>
+                  <td>iPAS</td>
+                </tr>
+                <tr>
+                  <td>09.45 - 10.20</td>
+                  <td>IPAS</td>
+                </tr>
+                <tr>
+                  <td>09.10 - 09.45</td>
+                  <td>IPAS</td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <td colspan="2" class="jpHeader">JP 5-JP 6</td>
+                </tr>
+                <tr>
+                  <td>10.35 - 11.10</td>
+                  <td>BK</td>
+                </tr>
+                <tr>
+                  <td>11.10 - 11.45</td>
+                  <td>BK</td>
+                </tr>
+                <table>
+                  <tr>
+                    <td colspan="2" class="jpHeader">JP 7-JP 8</td>
+                  </tr>
+                  <tr>
+                    <td>12.15 - 12.55</td>
+                    <td>Seni</td>
+                  </tr>
+                  <tr>
+                    <td>12.55 - 13.35</td>
+                    <td>Seni</td>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <td colspan="2" class="jpHeader">JP 9-JP 12</td>
+                  </tr>
+                  <tr>
+                    <td>13.35 - 14.15</td>
+                    <td>PABP</td>
+                  </tr>
+                  <tr>
+                    <td>14.15 - 14.55</td>
+                    <td>Pelajaran</td>
+                  </tr>
+                  <tr>
+                    <td>15.10 - 15.45</td>
+                    <td>Pelajaran</td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+
+          <!--HARI JUM'AT-->
+          <div class="hari">
+            <div class="sel"><a href="#" onclick="tampilkanHari('jumat')">Jum'at</a></div>
+            <div class="kartu" id="jumat">
+              <table>
+                <tr>
+                  <td colspan="2" class="jpHeader">JP 0-JP 4</td>
+                </tr>
+                <tr>
+                  <td>07.00 - 08.00</td>
+                  <td>besok libur</td>
+                </tr>
+                <tr>
+                  <td>08.00 - 08.35</td>
+                  <td>IPAS</td>
+                </tr>
+                <tr>
+                  <td>08.35 - 09.10</td>
+                  <td>iPAS</td>
+                </tr>
+                <tr>
+                  <td>09.45 - 10.20</td>
+                  <td>IPAS</td>
+                </tr>
+                <tr>
+                  <td>09.10 - 09.45</td>
+                  <td>IPAS</td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <td colspan="2" class="jpHeader">JP 5-JP 6</td>
+                </tr>
+                <tr>
+                  <td>10.35 - 11.10</td>
+                  <td>BK</td>
+                </tr>
+                <tr>
+                  <td>11.10 - 11.45</td>
+                  <td>BK</td>
+                </tr>
+                <table>
+                  <tr>
+                    <td colspan="2" class="jpHeader">JP 7-JP 8</td>
+                  </tr>
+                  <tr>
+                    <td>12.15 - 12.55</td>
+                    <td>Seni</td>
+                  </tr>
+                  <tr>
+                    <td>12.55 - 13.35</td>
+                    <td>Seni</td>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <td colspan="2" class="jpHeader">JP 9-JP 12</td>
+                  </tr>
+                  <tr>
+                    <td>13.35 - 14.15</td>
+                    <td>PABP</td>
+                  </tr>
+                  <tr>
+                    <td>14.15 - 14.55</td>
+                    <td>Pelajaran</td>
+                  </tr>
+                  <tr>
+                    <td>15.10 - 15.45</td>
+                    <td>Pelajaran</td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+        </div>
       </div>
 
   </main>

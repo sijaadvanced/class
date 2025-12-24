@@ -61,6 +61,24 @@ function updateView(e) {
 updateView(mq);
 mq.addEventListener('change', updateView)
 
+function blokNormatif() {
+    const normatif = document.querySelector('.blokNormatif');
+    const kejuruan = document.querySelector('.blokKejuruan');
+
+    normatif.style.display = 'flex';
+    kejuruan.style.display = 'none';
+}
+
+function blokKejuruan() {
+    const normatif = document.querySelector('.blokNormatif');
+    const kejuruan = document.querySelector('.blokKejuruan');
+
+    normatif.style.display = 'none';
+    kejuruan.style.display = 'flex';
+}
+
+blokNormatif()
+
 // GET TODAY, TAPI BELUM BISA DETECT N/K
 function hariIni() {
     const hariIndex = new Date().getDay();
