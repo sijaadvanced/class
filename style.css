@@ -367,7 +367,13 @@ textarea::placeholder {
 }
 
 #navMenu {
+  display: flex;
   height: 100%;
+}
+
+#navMenu li{
+  /* width: 120px; */
+  flex: 0 0 auto;
 }
 
 #navMenu button {
@@ -384,6 +390,8 @@ textarea::placeholder {
   transition: all 0.3s ease;
   box-shadow: none;
   user-select: none;
+  position: relative;
+  /* overflow: hidden; */
 }
 
 #navMenu button:hover,
@@ -402,7 +410,6 @@ textarea::placeholder {
 }
 
 #navMenu li.active button::before {
-  width: 100%;
   height: 3px;
 }
 
@@ -506,7 +513,7 @@ footer {
   border-top: 1.5px solid rgba(0, 216, 255, 0.3);
   margin-top: auto;
   user-select: none;
-  width: 500px;
+  max-width: 500px;
   display: flex;
   justify-content: center;
   justify-self: center;
@@ -749,6 +756,7 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   gap: 20px;
   background: rgba(30, 60, 130, 0.4);
   backdrop-filter: blur(2px);
@@ -760,8 +768,7 @@ footer p {
   width: 92%;
   height: fit-content;
   /* margin: auto; */
-  font-family: 'Poppins',
-  sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1em;
 }
 
@@ -803,7 +810,9 @@ tr td {
 }
 
 .hari {
-  width: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* .hari a {
@@ -914,4 +923,11 @@ tr td {
 .tipeTugas:hover::before {
   animation: blink .14s steps(1);
   opacity: 1;
+}
+
+.normatif{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
